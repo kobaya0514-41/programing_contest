@@ -24,11 +24,11 @@ done = [False] * N
 while len(Q) > 0 :
     d,i = heapq.heappop(Q)
     if done[i] :
-      continue
+        continue
  
     done[i] = True
  
     for (j,c) in G[i]:
-      if dist[j] == -1 or dist[j] > dist[i] + c:
-        dist[j] = dist[i] + c
-        heapq.heappush(Q, (dist[j], j))
+        if dist[j] == -1 or dist[j] > dist[i] + c:
+            dist[j] = dist[i] + c
+            heapq.heappush(Q, (dist[j], j))
